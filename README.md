@@ -1,19 +1,17 @@
-# Word-Guessing
+# CS771 Assignment 2 - Bigram-based Word Prediction
 
 ## Table of Contents
 - [Introduction](#introduction)
 - [Project Overview](#project-overview)
 - [Model](#model)
-- [Usage](#usage)
 - [Results](#results)
 
+
 ## Introduction
-This document outlines the design decisions and calculations behind the development of a machine learning algorithm using a Decision Tree Classifier for bigram-based word prediction. The task involves processing textual data where each word is represented by a sequence of lexicographically sorted bigrams. This study addresses the challenge of efficiently predicting words using only the first five unique bigrams of each word. The bigrams are extracted in a manner that ensures lexicographical order and removes duplicates, facilitating a streamlined input for prediction models. By leveraging these preprocessed bigrams, the prediction system aims to accurately suggest potential words associated with a provided set of bigrams, optimizing both computational efficiency and predictive accuracy in natural language processing applications.
+This project aims to develop a machine learning algorithm using a Decision Tree Classifier for bigram-based word prediction. The task involves processing textual data where each word is represented by a sequence of lexicographically sorted bigrams. The challenge is to predict words using only the first five unique bigrams of each word, which are extracted to ensure lexicographical order and remove duplicates. This streamlined input facilitates efficient prediction models, aiming to accurately suggest potential words associated with a provided set of bigrams, optimizing both computational efficiency and predictive accuracy in natural language processing applications.
 
 ## Project Overview
-The primary objective of this project is to predict words based on given bigrams as input, where bigrams are lexicographically sorted and limited to the first five unique bigrams per word. The challenge is predicting words that share the same set of bigrams after preprocessing. 
-
-The Decision Tree Classifier was chosen due to its simplicity and interpretability. Decision trees are non-parametric models that work well with categorical data and can handle complex decision boundaries expected in text classification tasks such as bigram-based word prediction.
+The primary objective of this project is to predict words based on given bigrams as input, where bigrams are lexicographically sorted and limited to the first five unique bigrams per word. The challenge lies in predicting words that share the same set of bigrams after preprocessing. The Decision Tree Classifier was chosen for its simplicity and interpretability. Decision trees are non-parametric models that work well with categorical data and can handle complex decision boundaries expected in text classification tasks such as bigram-based word prediction.
 
 ## Model
 
@@ -32,43 +30,6 @@ The Decision Tree Classifier was chosen due to its simplicity and interpretabili
 - **Entropy Criterion**: Used for selecting the best splits in the decision tree.
 - **No Explicit Pruning**: Default settings are used; however, pruning can be added if needed to manage overfitting.
 
-## Usage
-
-### Prerequisites
-- Python 3.7 or higher
-- pip (Python package installer)
-
-### Steps
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/your-username/cs771-assignment2.git
-    cd cs771-assignment2
-    ```
-2. Create and activate a virtual environment (optional but recommended):
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    ```
-3. Install the required dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-### Running the Model
-1. Prepare the dataset: Ensure that your dataset is in the `data` directory.
-2. Train the model:
-    ```bash
-    python train.py
-    ```
-3. Make Predictions:
-    Use the provided script to make predictions on new data:
-    ```bash
-    python predict.py --input data/new_data.csv --output results/predictions.csv
-    ```
-    **Parameters**:
-    - `--input`: Path to the new data file.
-    - `--output`: Path to save the prediction results.
 
 ## Results
 The implemented word prediction model, utilizing lexicographically sorted bigrams with duplicates removed and limited to the first five bigrams, achieved notable performance metrics. The model demonstrated a high precision score of 0.97, indicating its strong accuracy in predicting the correct words based on the given bigrams. Furthermore, the training process was highly efficient, with a training time of only 0.0097 seconds, underscoring the model’s computational efficiency. These results highlight the effectiveness and practicality of the proposed approach in word prediction tasks.
-
