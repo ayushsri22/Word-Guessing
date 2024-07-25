@@ -32,4 +32,4 @@ The primary objective of this project is to predict words based on given bigrams
 
 
 ## Results
-The implemented word prediction model, utilizing lexicographically sorted bigrams with duplicates removed and limited to the first five bigrams, achieved notable performance metrics. The model demonstrated a high precision score of 0.97, indicating its strong accuracy in predicting the correct words based on the given bigrams. Furthermore, the training process was highly efficient, with a training time of only 0.0097 seconds, underscoring the model’s computational efficiency. These results highlight the effectiveness and practicality of the proposed approach in word prediction tasks.
+###Model Performance The model demonstrated a high precision score of 0.97, indicating its strong accuracy in predicting the correct words based on the given bigrams.
