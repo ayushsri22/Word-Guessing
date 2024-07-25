@@ -1,4 +1,4 @@
-# CS771 Assignment 2 - Bigram-based Word Prediction
+# Word Guessing
 
 ## Table of Contents
 - [Introduction](#introduction)
